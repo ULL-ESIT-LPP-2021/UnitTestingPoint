@@ -9,7 +9,7 @@ Pruebas unitarias para la clase Punto
 Herramientas de desarrollo
 
   * Ejemplo de Rakefile
-  * Ejemplo de depuración
+  * Ejemplo de depuración:
 
 Para calcular el maximo comun divisor de dos números puede usar el siguiente algoritmo:
 
@@ -26,14 +26,18 @@ def gcd(n, d):
     return gcd
 </pre>
 
-El fichero gcd.rb contiene una implementación en Ruby del máximo común divisor. 
+El fichero `gcd.rb` contiene una implementación en Ruby del máximo común divisor. 
 Haciendo uso del depurador de ruby detecte el error en el código.
 
-Para invocar al depurador, se ha de ejecutar: ruby -rdebug gcd.rb
+Para invocar al depurador, se ha de ejecutar: `ruby -rdebug gcd.rb`
+
 Una vez dentro de mismo:
+
     * Para pedir ayuda el comando es:
-         (rdb:1) help
+         `(rdb:1) help`
+
     * Para listar el programa
+         <pre>
          (rdb:1) l
          [-4, 5] in gcd.rb
          => 1  def gcd(u, v)
@@ -41,11 +45,15 @@ Una vez dentro de mismo:
          3    while v == 0
          4      u, v = v, u % v
          5    end
+         </pre>
+
     * Para ejecutar la siguiente sentencia:
-         (rdb:1) n
+         `(rdb:1) n`
+
     * Para establecer un punto de ruptura (breakpoint):
-         (rdb:1) b 4
+         `(rdb:1) b 4`
+
     * Para ver dónde se está:
-         (rdb:1) w
+         `(rdb:1) w`
 
 
