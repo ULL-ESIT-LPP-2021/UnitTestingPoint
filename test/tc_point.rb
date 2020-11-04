@@ -16,9 +16,10 @@ class TestPoint < Test::Unit::TestCase
     assert_equal("(1,1)", (@origen + @unidad).to_s)
   end
   def test_type_check
-    assert_raise(RuntimeError) {Point.new('1','1')}
+    assert_raise(ArgumentError) {Point.new()}
+#    assert_raise(RuntimeError) {Point.new()}
   end
   def test_failure
-    assert_equal("(5,5)", (@origen * 5).to_s, "Producto escalar")
+    assert_not_equal("(5,5)", (@origen * 5).to_s, "Producto escalar")
   end
 end
